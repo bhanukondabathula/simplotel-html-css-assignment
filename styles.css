@@ -160,6 +160,8 @@ body {
 .lorem {
     width: 400px;
     font-family: Roboto;
+    font-size: 20px;
+    margin-right: 20px;
 }
 
 .hero-text h1 {
