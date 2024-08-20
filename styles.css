@@ -248,6 +248,9 @@ body {
     .card {
         width: 100%;
     }
+    .lorem{
+        max-width: 180px;;
+    }
 }
 
 @media (max-width: 480px) {
@@ -257,5 +260,8 @@ body {
 
     .hero-text p {
         font-size: 0.9rem;
+    }
+    .lorem{
+        max-width: 110px;
     }
 }
