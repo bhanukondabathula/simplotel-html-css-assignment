@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Container */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.logo img {
+    width: 100px;
+}
+
+/* Navbar Styles */
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin-left: 20px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.icon {
+    font-size: 40px;
+    margin-right: 25px;
+    background-color: white;
+}
+
+.nav-toggle-label {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.nav-toggle-label span {
+    height: 3px;
+    width: 25px;
+    background-color: #333;
+    margin-bottom: 5px;
+    border-radius: 2px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav-list {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        display: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-toggle:checked ~ nav .nav-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-toggle-label {
+        display: flex;
+        text-align: right;
+    }
+
+    .icon-sec {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-toggle-label span {
+        width: 20px;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .icon-sec {
+        display: none;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('heroimg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.hero-lorem {
+    background-color: #a89f9f;
+    padding: 28px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lorem {
+    width: 400px;
+    font-family: Roboto;
+}
+
+.hero-text h1 {
+    margin-bottom: 10px;
+}
+
+/* Content Section */
+.content {
+    background-color: #f7f7f7;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.lorem-heading {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.card1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.card h3 {
+    margin: 30px 0 10px;
+}
+
+.card p {
+    font-size: 18px;
+}
+
+.card .btn {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+}
