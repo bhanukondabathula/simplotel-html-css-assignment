@@ -33,8 +33,11 @@ body {
 .nav-list li {
     margin-left: 20px;
 }
-.nav-list li:nth-child(2) {
-  background: lightgreen;
+.nav-list li:nth-child(even) a {
+    color: #007bff !important;
+}
+.nav-list li:nth-child(even) a:hover {
+    color: #28a745 !important;
 }
 
 .nav-list li a {
