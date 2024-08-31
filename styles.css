@@ -54,10 +54,23 @@ body {
 
 .icon {
     font-size: 40px;
-    margin-right: 25px;
-    background-color: white;
+    color: #333; /* Initial color */
+    transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+    cursor: pointer;
 }
 
+        /* Hover effect */
+.icon:hover {
+    transform: scale(1.2); /* Increase size */
+    color: #007bff; /* Change color on hover */
+}
+
+        /* Click effect */
+.icon:active {
+    transform: rotate(45deg); /* Rotate the icon */
+    font-size: 50px; /* Increase font size */
+    color: #ff6347; /* Change color on click */
+}
 .nav-toggle-label {
     display: none;
     flex-direction: column;
